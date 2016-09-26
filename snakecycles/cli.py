@@ -38,7 +38,7 @@ def parse_line(line):
 def main():
     graph = DiGraph()
     stdin = sys.stdin
-    if sys.version_info[0] == 2:
+    if sys.version_info[0] == 2 and sys.stdin.encoding:
         stdin = codecs.getreader(sys.stdin.encoding)(sys.stdin)
     for line in stdin:
         src_dir, src_file, dst_dir, dst_file = parse_line(line)

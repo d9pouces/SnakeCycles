@@ -24,7 +24,7 @@ entry_points = {u'console_scripts': [u'snakecycles = snakecycles.cli:main']}
 setup(
     name='snakecycles',
     version=version,
-    description='No description yet.',
+    description='Parse snakefood output and detect import cycles.',
     long_description=long_description,
     author='mgallet',
     author_email='github@19pouces.net',
@@ -35,7 +35,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     test_suite='snakecycles.tests',
-    install_requires=['networkx'],
+    install_requires=['networkx', 'snakefood'],
     setup_requires=[],
     classifiers=['Development Status :: 3 - Alpha', 'Operating System :: MacOS :: MacOS X',
                  'Operating System :: Microsoft :: Windows', 'Operating System :: POSIX :: BSD',
